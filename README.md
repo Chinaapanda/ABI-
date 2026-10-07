@@ -9,6 +9,16 @@
 - แสดงผลเบื้องต้นระหว่างเสียงยังไม่จบ
 - โหมดฝึก 4 ตัวเลือกพร้อมรูปไอเท็ม เฉลย คะแนน และ streak โดยช้อยผิดใช้คนละกลุ่มเสียง
 
+## Deploy บน Vercel
+
+Import รีโป `Chinaapanda/ABI-` แล้วกด Deploy ได้เลย มี `vercel.json` ตั้งค่า static site ไว้แล้ว
+
+- Root Directory: รากรีโป (ไม่ต้องเปลี่ยนเป็น `dist`)
+- Framework Preset: Other
+- Build Command: ว่าง
+- Output Directory: `dist`
+- ไม่ต้องตั้ง Environment Variables
+
 ## เปิดในเครื่อง
 
 ใช้ Python 3 รันจากโฟลเดอร์รีโป:
