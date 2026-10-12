@@ -82,4 +82,7 @@ if(document.modelContext?.registerTool){
   window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});
 }
 import {initTraining} from './training.js';
+import {initLoadout} from './loadout.js';
+for(const mode of ['listen','train','loadout'])document.getElementById(mode+'-tab').addEventListener('click',()=>{if(mode!=='listen')void stop();for(const other of ['listen','train','loadout']){document.getElementById(other+'-panel').hidden=other!==mode;document.getElementById(other+'-tab').setAttribute('aria-pressed',String(other===mode));}window.dispatchEvent(new Event('abi-mode-change'));});
+initLoadout();
 void init();

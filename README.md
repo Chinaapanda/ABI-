@@ -9,6 +9,21 @@
 - แสดงผลเบื้องต้นระหว่างเสียงยังไม่จบ
 - โหมดฝึก 4 ตัวเลือกพร้อมรูปไอเท็ม เฉลย คะแนน และ streak โดยช้อยผิดใช้คนละกลุ่มเสียง
 
+## Raid Loadout Wheel
+
+แท็บ “สุ่มชุดลง Raid” เพิ่มวงล้อปืนพร้อมรูปอุปกรณ์ เลือกโหมด, แนวปืน, ระดับเกราะ และเกราะริกหรือเกราะแยกได้ หมุนหนึ่งครั้งได้ปืนหลัก, ammo caliber เดียวกัน, หมวก, เกราะ, เสื้อริกเมื่อจำเป็น, กระเป๋า และรายการยา/ของใช้ พร้อม checklist และ copy
+
+- Normal: gear/ammo สูงสุด T4; Lockdown: สูงสุด T5 ตามประกาศ Season 7
+- Forbidden: มีตัวเลือกเกราะ T3–T6; ammo สูงสุด T6 จากข้อมูลชุดนี้ ไม่ใช่การอ้างว่าโหมดมี cap T6
+- กระสุนขั้นต่ำ T3 และขั้นต่ำ T5 เมื่อเลือกเกราะ T6 จึงตัดปืนที่ไม่มี ammo ตามตัวกรองออก
+- ไม่ใส่เกราะริกซ้อนกับเกราะ/เสื้อริก
+- ไม่มีการสุ่ม attachments, headset หรือ face mask ที่ยังตรวจ compatibility ไม่ได้ เลือกแม็กกาซีนให้ตรงกับปืนใน Gunsmith
+- ปริมาณของใช้เป็น baseline ต้องปรับตามการเล่น ช่องเก็บ และน้ำหนัก ไม่มีการคำนวณ inventory packing หรือราคาตลาดสด จึงไม่ยืนยันเงื่อนไขมูลค่าเข้าโหมด
+
+ข้อมูลอุปกรณ์ตรวจวันที่ 13 ต.ค. 2026 จาก [ABI Builder Wiki](https://abibuilder.com/wiki), แนวทาง [เตรียมชุด](https://abibuilder.com/guides/playing-solo-chapter-2-loadout-philosophy), [รายการแพทย์](https://arenabreakout-infinite.com/items/medical/) และ [ประกาศเกมอย่างเป็นทางการ](https://steamcommunity.com/app/2073620/announcements/?l=english) รูปอุปกรณ์โหลดจาก ABI Builder โดยตรง
+
+ทดสอบ compatibility ด้วย `node test-loadout.mjs` (10,512 ชุดครอบคลุมทุก mode/tier/role/armor และทุกปืนใน pool)
+
 ## Deploy บน Vercel
 
 Import รีโป `Chinaapanda/ABI-` แล้วกด Deploy ได้เลย มี `vercel.json` ตั้งค่า static site ไว้แล้ว
